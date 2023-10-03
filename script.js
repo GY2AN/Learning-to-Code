@@ -9,7 +9,7 @@ function reset(){
     let secondNumber = document.getElementById("secondNumber");
     secondNumber.textContent = mathTwoRandom;
     document.getElementById("userNum").value= "";
-    gameRes.textContent = " Please Enter the Sum";
+    gameRes.textContent = "Enter the Sum";
     gameRes.style.color = "orange";
 }
 
@@ -38,7 +38,7 @@ firstNumber.textContent = mathRandomOne;
 let secondNumber = document.getElementById("secondNumber");
 secondNumber.textContent = mathTwoRandom;
 document.getElementById("userNum").value= "";
-gameRes.textContent = " Please Enter the Sum";
+gameRes.textContent = "Enter the Sum";
 gameRes.style.color = "orange";
 
 /*function check(){
