@@ -9,7 +9,7 @@ function reset(){
     let secondNumber = document.getElementById("secondNumber");
     secondNumber.textContent = mathTwoRandom;
     document.getElementById("userNum").value= "";
-    gameRes.textContent = "Baby Suno na, Please Enter the Sum";
+    gameRes.textContent = " Please Enter the Sum";
     gameRes.style.color = "orange";
 }
 
@@ -23,10 +23,10 @@ function check(){
     
 
     if( totalSum === userInputValue){
-        document.getElementById("gameResult").textContent = "I trust you baby";
+        document.getElementById("gameResult").textContent = "You got it!!";
         document.getElementById("gameResult").style.color = "green";
     }else{
-       gameRes.textContent = "Anpadh baby, Babu Madarchod";
+       gameRes.textContent = "Try again";
        gameRes.style.color = "red";
     }
 }
