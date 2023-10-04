@@ -1,56 +1,48 @@
-let gameRes = document.getElementById("gameResult");
-let mathRandomOne,mathTwoRandom;
+let firstInputValue = document.getElementById("firstNumber");
+let secondInputValue = document.getElementById("secondNumber");
+let userInputValue = document.getElementById("userNum");
+let displayGameResult = document.getElementById("gameResult");
 
-function reset(){
-    mathRandomOne = Math.ceil(Math.random() * 10);
-    mathTwoRandom = Math.floor(Math.random() * 50);
-    let firstNumber = document.getElementById("firstNumber");
-    firstNumber.textContent = mathRandomOne;
-    let secondNumber = document.getElementById("secondNumber");
-    secondNumber.textContent = mathTwoRandom;
-    document.getElementById("userNum").value= "";
-    gameRes.textContent = " Please Enter the Sum";
-    gameRes.style.color = "orange";
-}
+let randomNumberOne;
+let randomNumberTwo;
+
+randomNumberOne = Math.ceil(Math.random()*10);
+randomNumberTwo = Math.floor(Math.random()*10);
+
+firstInputValue.textContent = randomNumberOne;
+secondInputValue.textContent = randomNumberTwo;
+
+displayGameResult.textContent = "Enter the sum";
+displayGameResult.style.color = "blue";
+
+userInputValue.value = " ";
+
 
 function check(){
-    let userInput = document.getElementById("userNum");
-    let userInputValue = parseInt(userInput.value);
-    let numMathRandomOne = parseInt(mathRandomOne);
-    let numMathTwoRandom = parseInt(mathTwoRandom);
-    let totalSum  = numMathRandomOne + numMathTwoRandom;
-    //let a = Calc(userInputValue);
-    
+    let randomNumberOneValue = parseInt(randomNumberOne);
+    let randomNumberTwoValue = parseInt(randomNumberTwo);
+    let userInputVal = parseInt(userInputValue.value);
 
-    if( totalSum === userInputValue){
-        document.getElementById("gameResult").textContent = "You got it !!";
-        document.getElementById("gameResult").style.color = "green";
+    let totalSum = randomNumberOneValue + randomNumberTwoValue;
+
+    if(totalSum === userInputVal){
+        displayGameResult.textContent = "You got it!!";
+        displayGameResult.style.color = "green";
     }else{
-       gameRes.textContent = "Try again";
-       gameRes.style.color = "red";
+        displayGameResult.textContent = "Try again!!!";
+        displayGameResult.style.color = "red";
     }
 }
 
-mathRandomOne = Math.ceil(Math.random() * 10);
-mathTwoRandom = Math.floor(Math.random() * 50);
-let firstNumber = document.getElementById("firstNumber");
-firstNumber.textContent = mathRandomOne;
-let secondNumber = document.getElementById("secondNumber");
-secondNumber.textContent = mathTwoRandom;
-document.getElementById("userNum").value= "";
-gameRes.textContent = " Please Enter the Sum";
-gameRes.style.color = "orange";
+function reset(){
+    randomNumberOne = Math.ceil(Math.random()*10);
+    randomNumberTwo = Math.floor(Math.random()*10);
 
-/*function check(){
+    firstInputValue.textContent = randomNumberOne;
+    secondInputValue.textContent = randomNumberTwo;
 
-    if(totalSum === userInputValue){
-        document.getElementById("gameResult").textContent = "That's correct!!!";
-        document.getElementById("gameResult").style.color = "green";
-    }else{
-       gameRes.textContent = "Try again!!!";
-       gameRes.style.color = "red";
-    }
-}*/
+    displayGameResult.textContent = "Enter the sum";
+    displayGameResult.style.color = "blue";
 
-
-
+    userInputValue.value = " ";
+}
